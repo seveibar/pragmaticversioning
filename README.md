@@ -4,14 +4,15 @@
 
 Pragmatic versioning optimizes for communicating major changes to a package.
 
-Given a version number BIGRELEASE.MAJOR.MINOR, increment the:
+Given a version number BIGRELEASE.ANNOUNCE.INCREMENT, increment the:
 
 1. BIGRELEASE version whenever a major milestone, periodic version cut (e.g.
-   a yearly release) or other marketed version change occurs.
-2. MAJOR version whenever you have made an substantial incompatible API change,
+   a yearly release) or other marketed version change occurs, a BIGRELEASE
+   is always accompanied with a maintanence period.
+3. ANNOUNCE version whenever you have made an substantial incompatible API change,
    introduced a new set of features, or any change that an end user using the software
    normally may notice and should accompany an announcement.
-3. MINOR version for any new project contribution.
+4. INCREMENT version for any new project contribution.
    
 ## Introduction, Motivation
 
@@ -37,8 +38,7 @@ Pragmatic versioning looks at the issues that package authors face and addresses
 ## Tagged Versions and Computed Version
 
 Package consumers can still have the majority of the benefits of semantic versioning through the usage
-of tagged or computed versions. For example, `npm add somepackage@lts` or `npm add somepackage@latest-unstable`
-more accurately represents the intent of the user.
+of tagged or computed versions. For example, `npm add somepackage@lts`, `npm add somepackage@latest-unstable`, `npm add somepackage@canary` more accurately represents the intent of the user.
 
 These tagged releases can be also be computed using commit analysis or explicit cutting. In this way,
 package authors have the flexibility to serve users with different risk and upgrade tolerances.
@@ -59,10 +59,15 @@ Organizations want to be able to choose when they are going to maintain a substa
 
 ## Pragmatic Versioning in the wild
 
-### NextJS
-
-
-
 ### NodeJS
 
 NodeJS has created a timed release version
+
+### Canary-tagged Pragmatic Versioning (NextJS)
+
+NextJS uses pragmatic versioning scheme in combination with a semantic release scheme.
+
+- A MAJOR semantic version for NextJS is the same a pragmatic versioning BIGRELEASE version
+- A MINOR semantic version for NextJS is the same as a pragmatic versioning ANNOUNCE version
+- A PATCH semantic version for NextJS is a combination of fixes and features
+- A tagged canary version is released for each INCREMENT e.g. `v14.0.4-canary.27`
