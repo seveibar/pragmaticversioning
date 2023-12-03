@@ -54,14 +54,21 @@ Furthermore, the introduction of static analysis tools to many previously
 
 ### Fundamental Issues with Semantic Versioning
 
-The most fundamental issue with Semantic Versioning is the lack of a "brand" or BIGRELEASE version.
-Organizations want to be able to choose when they are going to maintain a substantial subset of features
+- The most fundamental issue with Semantic Versioning is the lack of a "brand" or BIGRELEASE version.
+Organizations want to be able to choose when they are going to maintain a substantial subset of features and give assurances for that release.
+- Frequent semantic releases begin to take on a negative meaning for announcements because they are associated with breaking changes, where before semantic versioning and in many software applications they were meant for major positive developments.
+- Major rewrites or improvements have no version number to encapsulate them in Semantic Versioning.[[
 
 ## Pragmatic Versioning in the wild
 
 ### NodeJS
 
-NodeJS has created a timed release version
+NodeJS has created a timed release versioning system as described below:
+
+> Major Node.js versions enter Current release status for six months, which gives library authors time to add support for them. After six months, odd-numbered releases (9, 11, etc.) become unsupported, and even-numbered releases (10, 12, etc.) move to Active LTS status and are ready for general use. LTS release status is "long-term support", which typically guarantees that critical bugs will be fixed for a total of 30 months. Production applications should only use Active LTS or Maintenance LTS releases.
+
+This mode of versioning gives great expectations to their users and is compatible with a
+Pragmatic Versioning system, but incompatible with Semantic Versioning.
 
 ### Canary-tagged Pragmatic Versioning (NextJS)
 
