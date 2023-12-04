@@ -37,7 +37,8 @@ Pragmatic versioning looks at the issues that package authors face and addresses
   that can be controlled by the package author.
   - For example, the author may choose to have long term support on version 1 while 
 - In Semantic Versioning, each change must carry meaning, there is no version number for small patches
-  or changes that have not been evaluated for meaning. Pragmatic versioning solves this by 
+  or changes that have not been evaluated for meaning. Pragmatic versioning solves this by always
+  interpreting a contribution as an INCREMENT by default
 
 ## Tagged Versions and Computed Version
 
