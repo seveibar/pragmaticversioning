@@ -9,7 +9,7 @@ Given a version number BIGRELEASE.ANNOUNCE.INCREMENT, increment the:
 
 1. BIGRELEASE version whenever a major milestone, periodic version cut (e.g.
    a yearly release) or other marketed version change occurs, a BIGRELEASE
-   is always accompanied with a maintanence period.
+   is often accompanied with a maintanence period.
 3. ANNOUNCE version whenever you have made an substantial incompatible API change,
    introduced a new set of features, or any change that an end user using the software
    normally may notice and should accompany an announcement.
