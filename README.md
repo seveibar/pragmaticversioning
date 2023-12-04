@@ -2,7 +2,8 @@
 
 ## Summary
 
-Pragmatic versioning optimizes for communicating major changes to a package.
+Pragmatic versioning optimizes for communicating changes to a package to package consumers,
+while retaining simple semantics for package maintainers.
 
 Given a version number BIGRELEASE.ANNOUNCE.INCREMENT, increment the:
 
