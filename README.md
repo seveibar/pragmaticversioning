@@ -30,6 +30,15 @@ Pragmatic versioning looks at the issues that package authors face and addresses
   a maintanence period or show a substantial milestone to their community.
 - Package maintainers can now clearly indicate what BIGRELEASEs will continue to receive updates
 
+## Definitions
+
+- `BIGRELEASE` - This is a "brand" number, meaning it is mostly used for marketing purposes. It indicates
+  a substantial release that can be accompanied with a maintenance period.
+- `ANNOUNCE` - Major feature(s) or changes in behavior that may facilitate an announcement. This can be done
+  on a scheduled basis (e.g. weekly) or after a substantial number of contributions are made that indicate
+  it's time to release a changelog to package consumers.
+- `INCREMENT` - Any contribution will increment by default.
+
 ## Where Semantic Versioning Fails
 
 - In Semantic Versioning, there is no way to release or communicate a LTS/"long term support" version
@@ -83,3 +92,10 @@ NextJS uses pragmatic versioning scheme in combination with a semantic release s
 - A MINOR semantic version for NextJS is the same as a pragmatic versioning ANNOUNCE version
 - A PATCH semantic version for NextJS is a combination of fixes and features
 - A tagged canary version is released for each INCREMENT e.g. `v14.0.4-canary.27`
+
+## Future Work
+
+- [ ] Formally define terminology
+- [ ] Execute real-world examples show-casing the method
+- [ ] Examine issues with pragmatic versioning
+- [ ] Recommend tooling or conventions
