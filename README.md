@@ -25,7 +25,10 @@ be maintained, how to get the most appropriate version for the end user, and aut
 software without worrying about explicitly labeling each change.
 
 Pragmatic versioning looks at the issues that package authors face and addresses these first:
-- By default, pragmatic versioning increases the MINOR version for every contribution.
+- By default, pragmatic versioning increases the INCREMENT version for every contribution.
+- BIGRELEASES are completely controlled by the package author when they would like to introduce
+  a maintanence period or show a substantial milestone to their community.
+- Package maintainers can now clearly indicate what BIGRELEASEs will continue to receive updates
 
 ## Where Semantic Versioning Fails
 
