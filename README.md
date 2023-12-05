@@ -1,5 +1,7 @@
 # Pragmatic Versioning 0.0.1
 
+[Hacker News Discussion](https://news.ycombinator.com/item?id=38513501)
+
 ## Summary
 
 Pragmatic versioning optimizes for communicating changes to a package to package consumers,
