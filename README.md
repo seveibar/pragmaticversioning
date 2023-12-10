@@ -99,7 +99,7 @@ NextJS uses pragmatic versioning scheme in combination with a semantic release s
 ## Future Work
 
 - [ ] Formally define terminology
-- [ ] Find more real world examples
+- [ ] Find more real world examples [(issue)](https://github.com/seveibar/pragmaticversioning/issues/1)
 - [ ] Execute real-world examples show-casing the method
 - [ ] Examine issues with pragmatic versioning
 - [ ] Recommend tooling or conventions
