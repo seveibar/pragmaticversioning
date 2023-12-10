@@ -1,6 +1,6 @@
 # Pragmatic Versioning 0.0.1
 
-[Hacker News Discussion](https://news.ycombinator.com/item?id=38513501) · [Edit on Github](https://github.com/seveibar/pragmaticversioning)
+[Hacker News Discussion](https://news.ycombinator.com/item?id=38513501) · [Edit on Github](https://github.com/seveibar/pragmaticversioning) · [Website](https://pragmaticversioning.com)
 
 ## Summary
 
