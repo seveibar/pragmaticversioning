@@ -1,5 +1,102 @@
-<html>
-  <body>
-    pragmatic versioning coming soon!
-  </body>
-</html>
+
+    <html>
+      <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.css">
+      </head>
+      <body>
+        <article class="markdown-body">
+            <h1 dir="auto">Pragmatic Versioning 0.0.1</h1>
+<p dir="auto"><a href="https://news.ycombinator.com/item?id=38513501" rel="nofollow">Hacker News Discussion</a></p>
+<h2 dir="auto">Summary</h2>
+<p dir="auto">Pragmatic versioning optimizes for communicating changes to a package to package consumers,<br>
+while retaining simple semantics for package maintainers.</p>
+<p dir="auto">Given a version number BIGRELEASE.ANNOUNCE.INCREMENT, increment the:</p>
+<ol dir="auto">
+<li>BIGRELEASE version whenever a major milestone, periodic version cut (e.g.<br>
+a yearly release) or other marketed version change occurs, a BIGRELEASE<br>
+is often accompanied with a maintanence period.</li>
+<li>ANNOUNCE version whenever you have made an substantial incompatible API change,<br>
+introduced a new set of features, or any change that an end user using the software<br>
+normally may notice and should accompany an announcement.</li>
+<li>INCREMENT version for any new project contribution.</li>
+</ol>
+<h2 dir="auto">Introduction, Motivation</h2>
+<p dir="auto">Effective package authors must maintain old versions of software as well as release new versions,<br>
+while efficiently communicating expectations and changes to their package consuemrs. Existing<br>
+versioning schemes like <a href="https://semver.org/spec/v2.0.0.html" rel="nofollow">semver</a> are excellent at informing end users<br>
+on how to upgrade software, but do not allow package authors to efficiently communicate what will<br>
+be maintained, how to get the most appropriate version for the end user, and automatically release<br>
+software without worrying about explicitly labeling each change.</p>
+<p dir="auto">Pragmatic versioning looks at the issues that package authors face and addresses these first:</p>
+<ul dir="auto">
+<li>By default, pragmatic versioning increases the INCREMENT version for every contribution.</li>
+<li>BIGRELEASES are completely controlled by the package author when they would like to introduce<br>
+a maintanence period or show a substantial milestone to their community.</li>
+<li>Package maintainers can now clearly indicate what BIGRELEASEs will continue to receive updates</li>
+</ul>
+<h2 dir="auto">Definitions</h2>
+<ul dir="auto">
+<li><code class="notranslate">BIGRELEASE</code> - This is a "brand" number, meaning it is mostly used for marketing purposes. It indicates<br>
+a substantial release that can be accompanied with a maintenance period.</li>
+<li><code class="notranslate">ANNOUNCE</code> - Major feature(s) or changes in behavior that may facilitate an announcement. This can be done<br>
+on a scheduled basis (e.g. weekly) or after a substantial number of contributions are made that indicate<br>
+it's time to release a changelog to package consumers.</li>
+<li><code class="notranslate">INCREMENT</code> - Any contribution will increment by default.</li>
+</ul>
+<h2 dir="auto">Where Semantic Versioning Fails</h2>
+<ul dir="auto">
+<li>In Semantic Versioning, there is no way to release or communicate a LTS/"long term support" version<br>
+of a package. In Pragmatic Versioning, this is solved with a BIGRELEASE version, which has meaning<br>
+that can be controlled by the package author.
+<ul dir="auto">
+<li>For example, the author may choose to have long term support on version 1 while</li>
+</ul>
+</li>
+<li>In Semantic Versioning, each change must carry meaning, there is no version number for small patches<br>
+or changes that have not been evaluated for meaning. Pragmatic versioning solves this by always<br>
+interpreting a contribution as an INCREMENT by default</li>
+</ul>
+<h2 dir="auto">Tagged Versions and Computed Version</h2>
+<p dir="auto">Package consumers can still have the majority of the benefits of semantic versioning through the usage<br>
+of tagged or computed versions. For example, <code class="notranslate">npm add somepackage@lts</code>, <code class="notranslate">npm add somepackage@latest-unstable</code>, <code class="notranslate">npm add somepackage@canary</code> more accurately represents the intent of the user.</p>
+<p dir="auto">These tagged releases can be also be computed using commit analysis or explicit cutting. In this way,<br>
+package authors have the flexibility to serve users with different risk and upgrade tolerances.</p>
+<h3 dir="auto">Automatic Upgrading</h3>
+<p dir="auto">In practice, package consumers want to stay up to date/compatible with the latest BIGRELEASE, consuming<br>
+some breaking changes in their upgrade process. <em>It is necessary for package consumers to take some<br>
+breaking changes as part of their upgrade process, because in practice only large releases are best<br>
+maintained for security</em>.</p>
+<p dir="auto">Furthermore, the introduction of static analysis tools to many previously</p>
+<h3 dir="auto">Fundamental Issues with Semantic Versioning</h3>
+<ul dir="auto">
+<li>The most fundamental issue with Semantic Versioning is the lack of a "brand" or BIGRELEASE version.<br>
+Organizations want to be able to choose when they are going to maintain a substantial subset of features and give assurances for that release.</li>
+<li>Frequent semantic releases begin to take on a negative meaning for announcements because they are associated with breaking changes, where before semantic versioning and in many software applications they were meant for major positive developments.</li>
+<li>Major rewrites or improvements have no version number to encapsulate them in Semantic Versioning.[[</li>
+</ul>
+<h2 dir="auto">Pragmatic Versioning in the wild</h2>
+<h3 dir="auto">NodeJS</h3>
+<p dir="auto">NodeJS has created a timed release versioning system as described below:</p>
+<blockquote>
+<p dir="auto">Major Node.js versions enter Current release status for six months, which gives library authors time to add support for them. After six months, odd-numbered releases (9, 11, etc.) become unsupported, and even-numbered releases (10, 12, etc.) move to Active LTS status and are ready for general use. LTS release status is "long-term support", which typically guarantees that critical bugs will be fixed for a total of 30 months. Production applications should only use Active LTS or Maintenance LTS releases.</p>
+</blockquote>
+<p dir="auto">This mode of versioning gives great expectations to their users and is compatible with a<br>
+Pragmatic Versioning system, but incompatible with Semantic Versioning.</p>
+<h3 dir="auto">Canary-tagged Pragmatic Versioning (NextJS)</h3>
+<p dir="auto">NextJS uses pragmatic versioning scheme in combination with a semantic release scheme.</p>
+<ul dir="auto">
+<li>A MAJOR semantic version for NextJS is the same a pragmatic versioning BIGRELEASE version</li>
+<li>A MINOR semantic version for NextJS is the same as a pragmatic versioning ANNOUNCE version</li>
+<li>A PATCH semantic version for NextJS is a combination of fixes and features</li>
+<li>A tagged canary version is released for each INCREMENT e.g. <code class="notranslate">v14.0.4-canary.27</code></li>
+</ul>
+<h2 dir="auto">Future Work</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Formally define terminology</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Execute real-world examples show-casing the method</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Examine issues with pragmatic versioning</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Recommend tooling or conventions</li>
+</ul>
+        </article>
+      </body>
+    </html>

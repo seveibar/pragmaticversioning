@@ -1,6 +1,6 @@
 # Pragmatic Versioning 0.0.1
 
-[Hacker News Discussion](https://news.ycombinator.com/item?id=38513501)
+[Hacker News Discussion](https://news.ycombinator.com/item?id=38513501) · [Edit on Github](https://github.com/seveibar/pragmaticversioning) · [Website](https://pragmaticversioning.com)
 
 ## Summary
 
@@ -12,11 +12,11 @@ Given a version number BIGRELEASE.ANNOUNCE.INCREMENT, increment the:
 1. BIGRELEASE version whenever a major milestone, periodic version cut (e.g.
    a yearly release) or other marketed version change occurs, a BIGRELEASE
    is often accompanied with a maintanence period.
-3. ANNOUNCE version whenever you have made an substantial incompatible API change,
+2. ANNOUNCE version whenever you have made an substantial incompatible API change,
    introduced a new set of features, or any change that an end user using the software
    normally may notice and should accompany an announcement.
-4. INCREMENT version for any new project contribution.
-   
+3. INCREMENT version for any new project contribution.
+
 ## Introduction, Motivation
 
 Effective package authors must maintain old versions of software as well as release new versions,
@@ -27,6 +27,7 @@ be maintained, how to get the most appropriate version for the end user, and aut
 software without worrying about explicitly labeling each change.
 
 Pragmatic versioning looks at the issues that package authors face and addresses these first:
+
 - By default, pragmatic versioning increases the INCREMENT version for every contribution.
 - BIGRELEASES are completely controlled by the package author when they would like to introduce
   a maintanence period or show a substantial milestone to their community.
@@ -46,7 +47,7 @@ Pragmatic versioning looks at the issues that package authors face and addresses
 - In Semantic Versioning, there is no way to release or communicate a LTS/"long term support" version
   of a package. In Pragmatic Versioning, this is solved with a BIGRELEASE version, which has meaning
   that can be controlled by the package author.
-  - For example, the author may choose to have long term support on version 1 while 
+  - For example, the author may choose to have long term support on version 1 while
 - In Semantic Versioning, each change must carry meaning, there is no version number for small patches
   or changes that have not been evaluated for meaning. Pragmatic versioning solves this by always
   interpreting a contribution as an INCREMENT by default
@@ -66,12 +67,12 @@ some breaking changes in their upgrade process. _It is necessary for package con
 breaking changes as part of their upgrade process, because in practice only large releases are best
 maintained for security_.
 
-Furthermore, the introduction of static analysis tools to many previously 
+Furthermore, the introduction of static analysis tools to many previously
 
 ### Fundamental Issues with Semantic Versioning
 
 - The most fundamental issue with Semantic Versioning is the lack of a "brand" or BIGRELEASE version.
-Organizations want to be able to choose when they are going to maintain a substantial subset of features and give assurances for that release.
+  Organizations want to be able to choose when they are going to maintain a substantial subset of features and give assurances for that release.
 - Frequent semantic releases begin to take on a negative meaning for announcements because they are associated with breaking changes, where before semantic versioning and in many software applications they were meant for major positive developments.
 - Major rewrites or improvements have no version number to encapsulate them in Semantic Versioning.[[
 
@@ -98,6 +99,7 @@ NextJS uses pragmatic versioning scheme in combination with a semantic release s
 ## Future Work
 
 - [ ] Formally define terminology
+- [ ] Find more real world examples
 - [ ] Execute real-world examples show-casing the method
 - [ ] Examine issues with pragmatic versioning
 - [ ] Recommend tooling or conventions
